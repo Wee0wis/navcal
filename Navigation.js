@@ -7,6 +7,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 import StackScreen from "./screens/StackScreen";
+import calculadora from "./screens/calculadora";
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -60,6 +61,16 @@ function MyTabs() {
             component={SettingsScreen}
             options={{
                 tabBarLabel: 'Settings',
+                tabBarIcon: ({ color, size }) => (
+                    <MaterialCommunityIcons name="brightness-5" color={color} size={30} />
+                ),
+            }}
+        />
+        <Tab.Screen 
+            name="calculadora" 
+            component={calculadora}
+            options={{
+                tabBarLabel: 'calculadora',
                 tabBarIcon: ({ color, size }) => (
                     <MaterialCommunityIcons name="brightness-5" color={color} size={30} />
                 ),
